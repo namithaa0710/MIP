@@ -1,0 +1,126 @@
+2026-08-18 09:47:52 - #----------Config info----------#
+2026-08-18 09:47:52 - network: lbunet,
+2026-08-18 09:47:52 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:47:52 - datasets: isic18,
+2026-08-18 09:47:52 - data_path: ./data/isic2018/,
+2026-08-18 09:47:52 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:47:52 - pretrained_path: ./pre_trained/,
+2026-08-18 09:47:52 - num_classes: 1,
+2026-08-18 09:47:52 - input_size_h: 256,
+2026-08-18 09:47:52 - input_size_w: 256,
+2026-08-18 09:47:52 - input_channels: 3,
+2026-08-18 09:47:52 - distributed: False,
+2026-08-18 09:47:52 - local_rank: -1,
+2026-08-18 09:47:52 - num_workers: 2,
+2026-08-18 09:47:52 - seed: 42,
+2026-08-18 09:47:52 - world_size: None,
+2026-08-18 09:47:52 - rank: None,
+2026-08-18 09:47:52 - amp: False,
+2026-08-18 09:47:52 - gpu_id: 0,
+2026-08-18 09:47:52 - batch_size: 8,
+2026-08-18 09:47:52 - epochs: 300,
+2026-08-18 09:47:52 - work_dir: results/lbunet_isic18_Tuesday_18_August_2026_09h_47m_52s/,
+2026-08-18 09:47:52 - print_interval: 20,
+2026-08-18 09:47:52 - val_interval: 15,
+2026-08-18 09:47:52 - save_interval: 5,
+2026-08-18 09:47:52 - threshold: 0.5,
+2026-08-18 09:47:52 - train_transformer: Compose(
+    <utils.myNormalize object at 0x0000022168B99C40>
+    <utils.myToTensor object at 0x0000022168B99E20>
+    <utils.myRandomHorizontalFlip object at 0x0000022168B99F10>
+    <utils.myRandomVerticalFlip object at 0x0000022168B99FD0>
+    <utils.myRandomRotation object at 0x0000022168B9A1B0>
+    <utils.myResize object at 0x00000221696773B0>
+),
+2026-08-18 09:47:52 - test_transformer: Compose(
+    <utils.myNormalize object at 0x0000022169736120>
+    <utils.myToTensor object at 0x00000221697366C0>
+    <utils.myResize object at 0x00000221697366F0>
+),
+2026-08-18 09:47:52 - opt: AdamW,
+2026-08-18 09:47:52 - lr: 0.001,
+2026-08-18 09:47:52 - betas: (0.9, 0.999),
+2026-08-18 09:47:52 - eps: 1e-08,
+2026-08-18 09:47:52 - weight_decay: 0.01,
+2026-08-18 09:47:52 - amsgrad: False,
+2026-08-18 09:47:52 - sch: CosineAnnealingLR,
+2026-08-18 09:47:52 - T_max: 50,
+2026-08-18 09:47:52 - eta_min: 1e-05,
+2026-08-18 09:47:52 - last_epoch: -1,
+2026-08-18 09:48:23 - train: epoch 1, iter:0, loss: 6.1910, lr: 0.001
+2026-08-18 09:48:27 - train: epoch 1, iter:20, loss: 4.3194, lr: 0.001
+2026-08-18 09:48:28 - train: epoch 1, iter:40, loss: 3.8512, lr: 0.001
+2026-08-18 09:48:30 - train: epoch 1, iter:60, loss: 3.6044, lr: 0.001
+2026-08-18 09:48:36 - train: epoch 1, iter:80, loss: 3.3776, lr: 0.001
+2026-08-18 09:48:42 - train: epoch 1, iter:100, loss: 3.1801, lr: 0.001
+2026-08-18 09:48:48 - train: epoch 1, iter:120, loss: 3.0420, lr: 0.001
+2026-08-18 09:48:53 - train: epoch 1, iter:140, loss: 2.9522, lr: 0.001
+2026-08-18 09:48:59 - train: epoch 1, iter:160, loss: 2.8719, lr: 0.001
+2026-08-18 09:49:04 - train: epoch 1, iter:180, loss: 2.7963, lr: 0.001
+2026-08-18 09:49:10 - train: epoch 1, iter:200, loss: 2.7436, lr: 0.001
+2026-08-18 09:49:15 - train: epoch 1, iter:220, loss: 2.7099, lr: 0.001
+2026-08-18 09:50:36 - val epoch: 1, loss: nan, miou: 0.7238933475970619, f1_or_dsc: 0.8127413135135123
+2026-08-18 09:50:48 - train: epoch 2, iter:0, loss: 1.7810, lr: 0.0009990232305719944
+2026-08-18 09:50:50 - train: epoch 2, iter:20, loss: 2.0613, lr: 0.0009990232305719944
+2026-08-18 09:50:51 - train: epoch 2, iter:40, loss: 2.0531, lr: 0.0009990232305719944
+2026-08-18 09:50:52 - train: epoch 2, iter:60, loss: 2.1011, lr: 0.0009990232305719944
+2026-08-18 09:50:53 - train: epoch 2, iter:80, loss: 2.0581, lr: 0.0009990232305719944
+2026-08-18 09:50:54 - train: epoch 2, iter:100, loss: 2.0390, lr: 0.0009990232305719944
+2026-08-18 09:50:55 - train: epoch 2, iter:120, loss: 2.0253, lr: 0.0009990232305719944
+2026-08-18 09:50:56 - train: epoch 2, iter:140, loss: 2.0086, lr: 0.0009990232305719944
+2026-08-18 09:50:58 - train: epoch 2, iter:160, loss: 1.9895, lr: 0.0009990232305719944
+2026-08-18 09:50:59 - train: epoch 2, iter:180, loss: 1.9660, lr: 0.0009990232305719944
+2026-08-18 09:51:00 - train: epoch 2, iter:200, loss: 1.9403, lr: 0.0009990232305719944
+2026-08-18 09:51:01 - train: epoch 2, iter:220, loss: 1.9273, lr: 0.0009990232305719944
+2026-08-18 09:51:32 - val epoch: 2, loss: nan, miou: 0.7545725813040872, f1_or_dsc: 0.855501279386056
+2026-08-18 09:51:49 - train: epoch 3, iter:0, loss: 1.4903, lr: 0.0009960967771506664
+2026-08-18 09:51:55 - train: epoch 3, iter:20, loss: 1.5989, lr: 0.0009960967771506664
+2026-08-18 09:52:01 - train: epoch 3, iter:40, loss: 1.6565, lr: 0.0009960967771506664
+2026-08-18 09:52:07 - train: epoch 3, iter:60, loss: 1.7173, lr: 0.0009960967771506664
+2026-08-18 09:52:13 - train: epoch 3, iter:80, loss: 1.7749, lr: 0.0009960967771506664
+2026-08-18 09:52:18 - train: epoch 3, iter:100, loss: 1.7765, lr: 0.0009960967771506664
+2026-08-18 09:52:24 - train: epoch 3, iter:120, loss: 1.7768, lr: 0.0009960967771506664
+2026-08-18 09:52:30 - train: epoch 3, iter:140, loss: 1.7387, lr: 0.0009960967771506664
+2026-08-18 09:52:36 - train: epoch 3, iter:160, loss: 1.7451, lr: 0.0009960967771506664
+2026-08-18 09:52:42 - train: epoch 3, iter:180, loss: 1.7202, lr: 0.0009960967771506664
+2026-08-18 09:52:47 - train: epoch 3, iter:200, loss: 1.7113, lr: 0.0009960967771506664
+2026-08-18 09:52:53 - train: epoch 3, iter:220, loss: 1.6959, lr: 0.0009960967771506664
+2026-08-18 09:53:25 - val epoch: 3, loss: nan, miou: 0.7470601683984254, f1_or_dsc: 0.8299177202274743
+2026-08-18 09:53:36 - train: epoch 4, iter:0, loss: 1.3362, lr: 0.0009912321891107007
+2026-08-18 09:53:38 - train: epoch 4, iter:20, loss: 1.6235, lr: 0.0009912321891107007
+2026-08-18 09:53:39 - train: epoch 4, iter:40, loss: 1.6328, lr: 0.0009912321891107007
+2026-08-18 09:53:40 - train: epoch 4, iter:60, loss: 1.5943, lr: 0.0009912321891107007
+2026-08-18 09:53:41 - train: epoch 4, iter:80, loss: 1.5715, lr: 0.0009912321891107007
+2026-08-18 09:53:42 - train: epoch 4, iter:100, loss: 1.5751, lr: 0.0009912321891107007
+2026-08-18 09:53:43 - train: epoch 4, iter:120, loss: 1.5731, lr: 0.0009912321891107007
+2026-08-18 09:53:45 - train: epoch 4, iter:140, loss: 1.5717, lr: 0.0009912321891107007
+2026-08-18 09:53:46 - train: epoch 4, iter:160, loss: 1.5820, lr: 0.0009912321891107007
+2026-08-18 09:53:47 - train: epoch 4, iter:180, loss: 1.5799, lr: 0.0009912321891107007
+2026-08-18 09:53:48 - train: epoch 4, iter:200, loss: 1.5725, lr: 0.0009912321891107007
+2026-08-18 09:53:49 - train: epoch 4, iter:220, loss: 1.5819, lr: 0.0009912321891107007
+2026-08-18 09:54:20 - val epoch: 4, loss: nan, miou: 0.7569842663291899, f1_or_dsc: 0.8506362689282998
+2026-08-18 09:54:32 - train: epoch 5, iter:0, loss: 1.3077, lr: 0.0009844486647586721
+2026-08-18 09:54:33 - train: epoch 5, iter:20, loss: 1.4550, lr: 0.0009844486647586721
+2026-08-18 09:54:34 - train: epoch 5, iter:40, loss: 1.4621, lr: 0.0009844486647586721
+2026-08-18 09:54:35 - train: epoch 5, iter:60, loss: 1.4848, lr: 0.0009844486647586721
+2026-08-18 09:54:36 - train: epoch 5, iter:80, loss: 1.5034, lr: 0.0009844486647586721
+2026-08-18 09:54:38 - train: epoch 5, iter:100, loss: 1.4776, lr: 0.0009844486647586721
+2026-08-18 09:54:39 - train: epoch 5, iter:120, loss: 1.4601, lr: 0.0009844486647586721
+2026-08-18 09:54:40 - train: epoch 5, iter:140, loss: 1.4774, lr: 0.0009844486647586721
+2026-08-18 09:54:41 - train: epoch 5, iter:160, loss: 1.4772, lr: 0.0009844486647586721
+2026-08-18 09:54:42 - train: epoch 5, iter:180, loss: 1.4968, lr: 0.0009844486647586721
+2026-08-18 09:54:44 - train: epoch 5, iter:200, loss: 1.4977, lr: 0.0009844486647586721
+2026-08-18 09:54:45 - train: epoch 5, iter:220, loss: 1.4996, lr: 0.0009844486647586721

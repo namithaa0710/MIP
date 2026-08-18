@@ -1,0 +1,627 @@
+2026-08-18 08:57:55 - #----------Config info----------#
+2026-08-18 08:57:55 - network: lbunet,
+2026-08-18 08:57:55 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 08:57:55 - datasets: isic18,
+2026-08-18 08:57:55 - data_path: ./data/isic2018/,
+2026-08-18 08:57:55 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 08:57:55 - pretrained_path: ./pre_trained/,
+2026-08-18 08:57:55 - num_classes: 1,
+2026-08-18 08:57:55 - input_size_h: 256,
+2026-08-18 08:57:55 - input_size_w: 256,
+2026-08-18 08:57:55 - input_channels: 3,
+2026-08-18 08:57:55 - distributed: False,
+2026-08-18 08:57:55 - local_rank: -1,
+2026-08-18 08:57:55 - num_workers: 2,
+2026-08-18 08:57:55 - seed: 42,
+2026-08-18 08:57:55 - world_size: None,
+2026-08-18 08:57:55 - rank: None,
+2026-08-18 08:57:55 - amp: False,
+2026-08-18 08:57:55 - gpu_id: 0,
+2026-08-18 08:57:55 - batch_size: 8,
+2026-08-18 08:57:55 - epochs: 300,
+2026-08-18 08:57:55 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 08:57:55 - print_interval: 20,
+2026-08-18 08:57:55 - val_interval: 15,
+2026-08-18 08:57:55 - save_interval: 5,
+2026-08-18 08:57:55 - threshold: 0.5,
+2026-08-18 08:57:55 - train_transformer: Compose(
+    <utils.myNormalize object at 0x000001C7CE470FB0>
+    <utils.myToTensor object at 0x000001C7CE470FE0>
+    <utils.myRandomHorizontalFlip object at 0x000001C7CE471010>
+    <utils.myRandomVerticalFlip object at 0x000001C7CE471040>
+    <utils.myRandomRotation object at 0x000001C7CE471070>
+    <utils.myResize object at 0x000001C7CE4710A0>
+),
+2026-08-18 08:57:55 - test_transformer: Compose(
+    <utils.myNormalize object at 0x000001C7CE471130>
+    <utils.myToTensor object at 0x000001C7CE471160>
+    <utils.myResize object at 0x000001C7CE471190>
+),
+2026-08-18 08:57:55 - opt: AdamW,
+2026-08-18 08:57:55 - lr: 0.001,
+2026-08-18 08:57:55 - betas: (0.9, 0.999),
+2026-08-18 08:57:55 - eps: 1e-08,
+2026-08-18 08:57:55 - weight_decay: 0.01,
+2026-08-18 08:57:55 - amsgrad: False,
+2026-08-18 08:57:55 - sch: CosineAnnealingLR,
+2026-08-18 08:57:55 - T_max: 50,
+2026-08-18 08:57:55 - eta_min: 1e-05,
+2026-08-18 08:57:55 - last_epoch: -1,
+2026-08-18 08:58:40 - #----------Config info----------#
+2026-08-18 08:58:40 - network: lbunet,
+2026-08-18 08:58:40 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 08:58:40 - datasets: isic18,
+2026-08-18 08:58:40 - data_path: ./data/isic2018/,
+2026-08-18 08:58:40 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 08:58:40 - pretrained_path: ./pre_trained/,
+2026-08-18 08:58:40 - num_classes: 1,
+2026-08-18 08:58:40 - input_size_h: 256,
+2026-08-18 08:58:40 - input_size_w: 256,
+2026-08-18 08:58:40 - input_channels: 3,
+2026-08-18 08:58:40 - distributed: False,
+2026-08-18 08:58:40 - local_rank: -1,
+2026-08-18 08:58:40 - num_workers: 2,
+2026-08-18 08:58:40 - seed: 42,
+2026-08-18 08:58:40 - world_size: None,
+2026-08-18 08:58:40 - rank: None,
+2026-08-18 08:58:40 - amp: False,
+2026-08-18 08:58:40 - gpu_id: 0,
+2026-08-18 08:58:40 - batch_size: 8,
+2026-08-18 08:58:40 - epochs: 300,
+2026-08-18 08:58:40 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 08:58:40 - print_interval: 20,
+2026-08-18 08:58:40 - val_interval: 15,
+2026-08-18 08:58:40 - save_interval: 5,
+2026-08-18 08:58:40 - threshold: 0.5,
+2026-08-18 08:58:40 - train_transformer: Compose(
+    <utils.myNormalize object at 0x0000013AF8781370>
+    <utils.myToTensor object at 0x0000013AF87813A0>
+    <utils.myRandomHorizontalFlip object at 0x0000013AF87813D0>
+    <utils.myRandomVerticalFlip object at 0x0000013AF8781400>
+    <utils.myRandomRotation object at 0x0000013AF8781430>
+    <utils.myResize object at 0x0000013AF8751700>
+),
+2026-08-18 08:58:40 - test_transformer: Compose(
+    <utils.myNormalize object at 0x0000013AF87657F0>
+    <utils.myToTensor object at 0x0000013AF87814C0>
+    <utils.myResize object at 0x0000013AF87814F0>
+),
+2026-08-18 08:58:40 - opt: AdamW,
+2026-08-18 08:58:40 - lr: 0.001,
+2026-08-18 08:58:40 - betas: (0.9, 0.999),
+2026-08-18 08:58:40 - eps: 1e-08,
+2026-08-18 08:58:40 - weight_decay: 0.01,
+2026-08-18 08:58:40 - amsgrad: False,
+2026-08-18 08:58:40 - sch: CosineAnnealingLR,
+2026-08-18 08:58:40 - T_max: 50,
+2026-08-18 08:58:40 - eta_min: 1e-05,
+2026-08-18 08:58:40 - last_epoch: -1,
+2026-08-18 08:59:53 - #----------Config info----------#
+2026-08-18 08:59:53 - network: lbunet,
+2026-08-18 08:59:53 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 08:59:53 - datasets: isic18,
+2026-08-18 08:59:53 - data_path: ./data/isic2018/,
+2026-08-18 08:59:53 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 08:59:53 - pretrained_path: ./pre_trained/,
+2026-08-18 08:59:53 - num_classes: 1,
+2026-08-18 08:59:53 - input_size_h: 256,
+2026-08-18 08:59:53 - input_size_w: 256,
+2026-08-18 08:59:53 - input_channels: 3,
+2026-08-18 08:59:53 - distributed: False,
+2026-08-18 08:59:53 - local_rank: -1,
+2026-08-18 08:59:53 - num_workers: 2,
+2026-08-18 08:59:53 - seed: 42,
+2026-08-18 08:59:53 - world_size: None,
+2026-08-18 08:59:53 - rank: None,
+2026-08-18 08:59:53 - amp: False,
+2026-08-18 08:59:53 - gpu_id: 0,
+2026-08-18 08:59:53 - batch_size: 8,
+2026-08-18 08:59:53 - epochs: 300,
+2026-08-18 08:59:53 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 08:59:53 - print_interval: 20,
+2026-08-18 08:59:53 - val_interval: 15,
+2026-08-18 08:59:53 - save_interval: 5,
+2026-08-18 08:59:53 - threshold: 0.5,
+2026-08-18 08:59:53 - train_transformer: Compose(
+    <utils.myNormalize object at 0x000001FB5C578DA0>
+    <utils.myToTensor object at 0x000001FB5C578D70>
+    <utils.myRandomHorizontalFlip object at 0x000001FB5C578E30>
+    <utils.myRandomVerticalFlip object at 0x000001FB5C578E60>
+    <utils.myRandomRotation object at 0x000001FB5C578E90>
+    <utils.myResize object at 0x000001FB5C578EC0>
+),
+2026-08-18 08:59:53 - test_transformer: Compose(
+    <utils.myNormalize object at 0x000001FB5C578F50>
+    <utils.myToTensor object at 0x000001FB5C578F80>
+    <utils.myResize object at 0x000001FB5C578FB0>
+),
+2026-08-18 08:59:53 - opt: AdamW,
+2026-08-18 08:59:53 - lr: 0.001,
+2026-08-18 08:59:53 - betas: (0.9, 0.999),
+2026-08-18 08:59:53 - eps: 1e-08,
+2026-08-18 08:59:53 - weight_decay: 0.01,
+2026-08-18 08:59:53 - amsgrad: False,
+2026-08-18 08:59:53 - sch: CosineAnnealingLR,
+2026-08-18 08:59:53 - T_max: 50,
+2026-08-18 08:59:53 - eta_min: 1e-05,
+2026-08-18 08:59:53 - last_epoch: -1,
+2026-08-18 09:00:38 - #----------Config info----------#
+2026-08-18 09:00:38 - network: lbunet,
+2026-08-18 09:00:38 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:00:38 - datasets: isic18,
+2026-08-18 09:00:38 - data_path: ./data/isic2018/,
+2026-08-18 09:00:38 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:00:38 - pretrained_path: ./pre_trained/,
+2026-08-18 09:00:38 - num_classes: 1,
+2026-08-18 09:00:38 - input_size_h: 256,
+2026-08-18 09:00:38 - input_size_w: 256,
+2026-08-18 09:00:38 - input_channels: 3,
+2026-08-18 09:00:38 - distributed: False,
+2026-08-18 09:00:38 - local_rank: -1,
+2026-08-18 09:00:38 - num_workers: 2,
+2026-08-18 09:00:38 - seed: 42,
+2026-08-18 09:00:38 - world_size: None,
+2026-08-18 09:00:38 - rank: None,
+2026-08-18 09:00:38 - amp: False,
+2026-08-18 09:00:38 - gpu_id: 0,
+2026-08-18 09:00:38 - batch_size: 8,
+2026-08-18 09:00:38 - epochs: 300,
+2026-08-18 09:00:38 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:00:38 - print_interval: 20,
+2026-08-18 09:00:38 - val_interval: 15,
+2026-08-18 09:00:38 - save_interval: 5,
+2026-08-18 09:00:38 - threshold: 0.5,
+2026-08-18 09:00:38 - train_transformer: Compose(
+    <utils.myNormalize object at 0x0000021B96887A10>
+    <utils.myToTensor object at 0x0000021B969411C0>
+    <utils.myRandomHorizontalFlip object at 0x0000021B969411F0>
+    <utils.myRandomVerticalFlip object at 0x0000021B96941220>
+    <utils.myRandomRotation object at 0x0000021B96941250>
+    <utils.myResize object at 0x0000021B96941280>
+),
+2026-08-18 09:00:38 - test_transformer: Compose(
+    <utils.myNormalize object at 0x0000021B96941310>
+    <utils.myToTensor object at 0x0000021B96941340>
+    <utils.myResize object at 0x0000021B96941370>
+),
+2026-08-18 09:00:38 - opt: AdamW,
+2026-08-18 09:00:38 - lr: 0.001,
+2026-08-18 09:00:38 - betas: (0.9, 0.999),
+2026-08-18 09:00:38 - eps: 1e-08,
+2026-08-18 09:00:38 - weight_decay: 0.01,
+2026-08-18 09:00:38 - amsgrad: False,
+2026-08-18 09:00:38 - sch: CosineAnnealingLR,
+2026-08-18 09:00:38 - T_max: 50,
+2026-08-18 09:00:38 - eta_min: 1e-05,
+2026-08-18 09:00:38 - last_epoch: -1,
+2026-08-18 09:01:51 - test of best model, miou: 0.7578353782807955, f1_or_dsc: 0.8477223644830388
+2026-08-18 09:07:15 - #----------Config info----------#
+2026-08-18 09:07:15 - network: lbunet,
+2026-08-18 09:07:15 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:07:15 - datasets: isic18,
+2026-08-18 09:07:15 - data_path: ./data/isic2018/,
+2026-08-18 09:07:15 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:07:15 - pretrained_path: ./pre_trained/,
+2026-08-18 09:07:15 - num_classes: 1,
+2026-08-18 09:07:15 - input_size_h: 256,
+2026-08-18 09:07:15 - input_size_w: 256,
+2026-08-18 09:07:15 - input_channels: 3,
+2026-08-18 09:07:15 - distributed: False,
+2026-08-18 09:07:15 - local_rank: -1,
+2026-08-18 09:07:15 - num_workers: 2,
+2026-08-18 09:07:15 - seed: 42,
+2026-08-18 09:07:15 - world_size: None,
+2026-08-18 09:07:15 - rank: None,
+2026-08-18 09:07:15 - amp: False,
+2026-08-18 09:07:15 - gpu_id: 0,
+2026-08-18 09:07:15 - batch_size: 8,
+2026-08-18 09:07:15 - epochs: 300,
+2026-08-18 09:07:15 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:07:15 - print_interval: 20,
+2026-08-18 09:07:15 - val_interval: 15,
+2026-08-18 09:07:15 - save_interval: 5,
+2026-08-18 09:07:15 - threshold: 0.5,
+2026-08-18 09:07:15 - train_transformer: Compose(
+    <utils.myNormalize object at 0x000001FA28E842C0>
+    <utils.myToTensor object at 0x000001FA28E842F0>
+    <utils.myRandomHorizontalFlip object at 0x000001FA28E84320>
+    <utils.myRandomVerticalFlip object at 0x000001FA28E84350>
+    <utils.myRandomRotation object at 0x000001FA28E84380>
+    <utils.myResize object at 0x000001FA28E843B0>
+),
+2026-08-18 09:07:15 - test_transformer: Compose(
+    <utils.myNormalize object at 0x000001FA28E84440>
+    <utils.myToTensor object at 0x000001FA28E84470>
+    <utils.myResize object at 0x000001FA28E844A0>
+),
+2026-08-18 09:07:15 - opt: AdamW,
+2026-08-18 09:07:15 - lr: 0.001,
+2026-08-18 09:07:15 - betas: (0.9, 0.999),
+2026-08-18 09:07:15 - eps: 1e-08,
+2026-08-18 09:07:15 - weight_decay: 0.01,
+2026-08-18 09:07:15 - amsgrad: False,
+2026-08-18 09:07:15 - sch: CosineAnnealingLR,
+2026-08-18 09:07:15 - T_max: 50,
+2026-08-18 09:07:15 - eta_min: 1e-05,
+2026-08-18 09:07:15 - last_epoch: -1,
+2026-08-18 09:07:52 - test of best model, miou: 0.7768238132436108, f1_or_dsc: 0.8674304897294303
+2026-08-18 09:18:12 - #----------Config info----------#
+2026-08-18 09:18:12 - network: lbunet,
+2026-08-18 09:18:12 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:18:12 - datasets: isic18,
+2026-08-18 09:18:12 - data_path: ./data/isic2018/,
+2026-08-18 09:18:12 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:18:12 - pretrained_path: ./pre_trained/,
+2026-08-18 09:18:12 - num_classes: 1,
+2026-08-18 09:18:12 - input_size_h: 256,
+2026-08-18 09:18:12 - input_size_w: 256,
+2026-08-18 09:18:12 - input_channels: 3,
+2026-08-18 09:18:12 - distributed: False,
+2026-08-18 09:18:12 - local_rank: -1,
+2026-08-18 09:18:12 - num_workers: 2,
+2026-08-18 09:18:12 - seed: 42,
+2026-08-18 09:18:12 - world_size: None,
+2026-08-18 09:18:12 - rank: None,
+2026-08-18 09:18:12 - amp: False,
+2026-08-18 09:18:12 - gpu_id: 0,
+2026-08-18 09:18:12 - batch_size: 8,
+2026-08-18 09:18:12 - epochs: 300,
+2026-08-18 09:18:12 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:18:12 - print_interval: 20,
+2026-08-18 09:18:12 - val_interval: 15,
+2026-08-18 09:18:12 - save_interval: 5,
+2026-08-18 09:18:12 - threshold: 0.5,
+2026-08-18 09:18:12 - train_transformer: Compose(
+    <utils.myNormalize object at 0x0000027805D942C0>
+    <utils.myToTensor object at 0x0000027805D942F0>
+    <utils.myRandomHorizontalFlip object at 0x0000027805D94320>
+    <utils.myRandomVerticalFlip object at 0x0000027805D94350>
+    <utils.myRandomRotation object at 0x0000027805D94380>
+    <utils.myResize object at 0x0000027805D943B0>
+),
+2026-08-18 09:18:12 - test_transformer: Compose(
+    <utils.myNormalize object at 0x0000027805D94410>
+    <utils.myToTensor object at 0x0000027805D94440>
+    <utils.myResize object at 0x0000027805D94470>
+),
+2026-08-18 09:18:12 - opt: AdamW,
+2026-08-18 09:18:12 - lr: 0.001,
+2026-08-18 09:18:12 - betas: (0.9, 0.999),
+2026-08-18 09:18:12 - eps: 1e-08,
+2026-08-18 09:18:12 - weight_decay: 0.01,
+2026-08-18 09:18:12 - amsgrad: False,
+2026-08-18 09:18:12 - sch: CosineAnnealingLR,
+2026-08-18 09:18:12 - T_max: 50,
+2026-08-18 09:18:12 - eta_min: 1e-05,
+2026-08-18 09:18:12 - last_epoch: -1,
+2026-08-18 09:19:52 - test of best model, miou: 0.7795071361325676, f1_or_dsc: 0.8695814403111264
+2026-08-18 09:30:30 - #----------Config info----------#
+2026-08-18 09:30:30 - network: lbunet,
+2026-08-18 09:30:30 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:30:30 - datasets: isic18,
+2026-08-18 09:30:30 - data_path: ./data/isic2018/,
+2026-08-18 09:30:30 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:30:30 - pretrained_path: ./pre_trained/,
+2026-08-18 09:30:30 - num_classes: 1,
+2026-08-18 09:30:30 - input_size_h: 256,
+2026-08-18 09:30:30 - input_size_w: 256,
+2026-08-18 09:30:30 - input_channels: 3,
+2026-08-18 09:30:30 - distributed: False,
+2026-08-18 09:30:30 - local_rank: -1,
+2026-08-18 09:30:30 - num_workers: 2,
+2026-08-18 09:30:30 - seed: 42,
+2026-08-18 09:30:30 - world_size: None,
+2026-08-18 09:30:30 - rank: None,
+2026-08-18 09:30:30 - amp: False,
+2026-08-18 09:30:30 - gpu_id: 0,
+2026-08-18 09:30:30 - batch_size: 8,
+2026-08-18 09:30:30 - epochs: 300,
+2026-08-18 09:30:30 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:30:30 - print_interval: 20,
+2026-08-18 09:30:30 - val_interval: 15,
+2026-08-18 09:30:30 - save_interval: 5,
+2026-08-18 09:30:30 - threshold: 0.5,
+2026-08-18 09:30:30 - train_transformer: Compose(
+    <utils.myNormalize object at 0x000002648D18FF80>
+    <utils.myToTensor object at 0x000002648D18FFB0>
+    <utils.myRandomHorizontalFlip object at 0x000002648D18FFE0>
+    <utils.myRandomVerticalFlip object at 0x000002648D1B8050>
+    <utils.myRandomRotation object at 0x000002648D1B8080>
+    <utils.myResize object at 0x000002648D1B80B0>
+),
+2026-08-18 09:30:30 - test_transformer: Compose(
+    <utils.myNormalize object at 0x000002648D1B8140>
+    <utils.myToTensor object at 0x000002648D1B8170>
+    <utils.myResize object at 0x000002648D1B81A0>
+),
+2026-08-18 09:30:30 - opt: AdamW,
+2026-08-18 09:30:30 - lr: 0.001,
+2026-08-18 09:30:30 - betas: (0.9, 0.999),
+2026-08-18 09:30:30 - eps: 1e-08,
+2026-08-18 09:30:30 - weight_decay: 0.01,
+2026-08-18 09:30:30 - amsgrad: False,
+2026-08-18 09:30:30 - sch: CosineAnnealingLR,
+2026-08-18 09:30:30 - T_max: 50,
+2026-08-18 09:30:30 - eta_min: 1e-05,
+2026-08-18 09:30:30 - last_epoch: -1,
+2026-08-18 09:31:25 - test of best model, miou: 0.7795071361325676, f1_or_dsc: 0.8695814403111264
+2026-08-18 09:31:32 - #----------Config info----------#
+2026-08-18 09:31:32 - network: lbunet,
+2026-08-18 09:31:32 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:31:32 - datasets: isic18,
+2026-08-18 09:31:32 - data_path: ./data/isic2018/,
+2026-08-18 09:31:32 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:31:32 - pretrained_path: ./pre_trained/,
+2026-08-18 09:31:32 - num_classes: 1,
+2026-08-18 09:31:32 - input_size_h: 256,
+2026-08-18 09:31:32 - input_size_w: 256,
+2026-08-18 09:31:32 - input_channels: 3,
+2026-08-18 09:31:32 - distributed: False,
+2026-08-18 09:31:32 - local_rank: -1,
+2026-08-18 09:31:32 - num_workers: 2,
+2026-08-18 09:31:32 - seed: 42,
+2026-08-18 09:31:32 - world_size: None,
+2026-08-18 09:31:32 - rank: None,
+2026-08-18 09:31:32 - amp: False,
+2026-08-18 09:31:32 - gpu_id: 0,
+2026-08-18 09:31:32 - batch_size: 8,
+2026-08-18 09:31:32 - epochs: 300,
+2026-08-18 09:31:32 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:31:32 - print_interval: 20,
+2026-08-18 09:31:32 - val_interval: 15,
+2026-08-18 09:31:32 - save_interval: 5,
+2026-08-18 09:31:32 - threshold: 0.5,
+2026-08-18 09:31:32 - train_transformer: Compose(
+    <utils.myNormalize object at 0x00000117B4C53410>
+    <utils.myToTensor object at 0x00000117B4CC63D0>
+    <utils.myRandomHorizontalFlip object at 0x00000117B4F1E5D0>
+    <utils.myRandomVerticalFlip object at 0x00000117B4F1E7D0>
+    <utils.myRandomRotation object at 0x00000117B4F1EC10>
+    <utils.myResize object at 0x00000117B4EF0590>
+),
+2026-08-18 09:31:32 - test_transformer: Compose(
+    <utils.myNormalize object at 0x00000117B4E6C1D0>
+    <utils.myToTensor object at 0x00000117B4F1FE10>
+    <utils.myResize object at 0x00000117B4F1FE50>
+),
+2026-08-18 09:31:32 - opt: AdamW,
+2026-08-18 09:31:32 - lr: 0.001,
+2026-08-18 09:31:32 - betas: (0.9, 0.999),
+2026-08-18 09:31:32 - eps: 1e-08,
+2026-08-18 09:31:32 - weight_decay: 0.01,
+2026-08-18 09:31:32 - amsgrad: False,
+2026-08-18 09:31:32 - sch: CosineAnnealingLR,
+2026-08-18 09:31:32 - T_max: 50,
+2026-08-18 09:31:32 - eta_min: 1e-05,
+2026-08-18 09:31:32 - last_epoch: -1,
+2026-08-18 09:32:54 - test of best model, miou: 0.7795071361325676, f1_or_dsc: 0.8695814403111264
+2026-08-18 09:42:22 - #----------Config info----------#
+2026-08-18 09:42:22 - network: lbunet,
+2026-08-18 09:42:22 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:42:22 - datasets: isic18,
+2026-08-18 09:42:22 - data_path: ./data/isic2018/,
+2026-08-18 09:42:22 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:42:22 - pretrained_path: ./pre_trained/,
+2026-08-18 09:42:22 - num_classes: 1,
+2026-08-18 09:42:22 - input_size_h: 256,
+2026-08-18 09:42:22 - input_size_w: 256,
+2026-08-18 09:42:22 - input_channels: 3,
+2026-08-18 09:42:22 - distributed: False,
+2026-08-18 09:42:22 - local_rank: -1,
+2026-08-18 09:42:22 - num_workers: 2,
+2026-08-18 09:42:22 - seed: 42,
+2026-08-18 09:42:22 - world_size: None,
+2026-08-18 09:42:22 - rank: None,
+2026-08-18 09:42:22 - amp: False,
+2026-08-18 09:42:22 - gpu_id: 0,
+2026-08-18 09:42:22 - batch_size: 8,
+2026-08-18 09:42:22 - epochs: 300,
+2026-08-18 09:42:22 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:42:22 - print_interval: 20,
+2026-08-18 09:42:22 - val_interval: 15,
+2026-08-18 09:42:22 - save_interval: 5,
+2026-08-18 09:42:22 - threshold: 0.5,
+2026-08-18 09:42:22 - train_transformer: Compose(
+    <utils.myNormalize object at 0x000002496F904110>
+    <utils.myToTensor object at 0x000002496F9041A0>
+    <utils.myRandomHorizontalFlip object at 0x000002496F9041D0>
+    <utils.myRandomVerticalFlip object at 0x000002496F904200>
+    <utils.myRandomRotation object at 0x000002496F904230>
+    <utils.myResize object at 0x000002496F904260>
+),
+2026-08-18 09:42:22 - test_transformer: Compose(
+    <utils.myNormalize object at 0x000002496F9042F0>
+    <utils.myToTensor object at 0x000002496F904320>
+    <utils.myResize object at 0x000002496F904350>
+),
+2026-08-18 09:42:22 - opt: AdamW,
+2026-08-18 09:42:22 - lr: 0.001,
+2026-08-18 09:42:22 - betas: (0.9, 0.999),
+2026-08-18 09:42:22 - eps: 1e-08,
+2026-08-18 09:42:22 - weight_decay: 0.01,
+2026-08-18 09:42:22 - amsgrad: False,
+2026-08-18 09:42:22 - sch: CosineAnnealingLR,
+2026-08-18 09:42:22 - T_max: 50,
+2026-08-18 09:42:22 - eta_min: 1e-05,
+2026-08-18 09:42:22 - last_epoch: -1,
+2026-08-18 09:43:28 - test of best model, miou: 0.7795071361325676, f1_or_dsc: 0.8695814403111264
+2026-08-18 09:48:42 - #----------Config info----------#
+2026-08-18 09:48:42 - network: lbunet,
+2026-08-18 09:48:42 - model_config: {'num_classes': 1, 'input_channels': 3, 'c_list': [8, 16, 24, 32, 48, 64], 'bridge': True, 'gt_ds': True},
+2026-08-18 09:48:42 - datasets: isic18,
+2026-08-18 09:48:42 - data_path: ./data/isic2018/,
+2026-08-18 09:48:42 - criterion: GT_BceDiceLoss(
+  (bcedice): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+  (bcedice2): BceDiceLoss(
+    (bce): BCELoss(
+      (bceloss): BCELoss()
+    )
+    (dice): DiceLoss()
+  )
+),
+2026-08-18 09:48:42 - pretrained_path: ./pre_trained/,
+2026-08-18 09:48:42 - num_classes: 1,
+2026-08-18 09:48:42 - input_size_h: 256,
+2026-08-18 09:48:42 - input_size_w: 256,
+2026-08-18 09:48:42 - input_channels: 3,
+2026-08-18 09:48:42 - distributed: False,
+2026-08-18 09:48:42 - local_rank: -1,
+2026-08-18 09:48:42 - num_workers: 2,
+2026-08-18 09:48:42 - seed: 42,
+2026-08-18 09:48:42 - world_size: None,
+2026-08-18 09:48:42 - rank: None,
+2026-08-18 09:48:42 - amp: False,
+2026-08-18 09:48:42 - gpu_id: 0,
+2026-08-18 09:48:42 - batch_size: 8,
+2026-08-18 09:48:42 - epochs: 300,
+2026-08-18 09:48:42 - work_dir: results\lbunet_isic18_Tuesday_18_August_2026_08h_53m_27s/,
+2026-08-18 09:48:42 - print_interval: 20,
+2026-08-18 09:48:42 - val_interval: 15,
+2026-08-18 09:48:42 - save_interval: 5,
+2026-08-18 09:48:42 - threshold: 0.5,
+2026-08-18 09:48:42 - train_transformer: Compose(
+    <utils.myNormalize object at 0x00000288A72DFFB0>
+    <utils.myToTensor object at 0x00000288A72DFFE0>
+    <utils.myRandomHorizontalFlip object at 0x00000288A7308050>
+    <utils.myRandomVerticalFlip object at 0x00000288A7308080>
+    <utils.myRandomRotation object at 0x00000288A73080B0>
+    <utils.myResize object at 0x00000288A73080E0>
+),
+2026-08-18 09:48:42 - test_transformer: Compose(
+    <utils.myNormalize object at 0x00000288A7308170>
+    <utils.myToTensor object at 0x00000288A73081A0>
+    <utils.myResize object at 0x00000288A73081D0>
+),
+2026-08-18 09:48:42 - opt: AdamW,
+2026-08-18 09:48:42 - lr: 0.001,
+2026-08-18 09:48:42 - betas: (0.9, 0.999),
+2026-08-18 09:48:42 - eps: 1e-08,
+2026-08-18 09:48:42 - weight_decay: 0.01,
+2026-08-18 09:48:42 - amsgrad: False,
+2026-08-18 09:48:42 - sch: CosineAnnealingLR,
+2026-08-18 09:48:42 - T_max: 50,
+2026-08-18 09:48:42 - eta_min: 1e-05,
+2026-08-18 09:48:42 - last_epoch: -1,
+2026-08-18 09:50:24 - test of best model, miou: 0.7795071361325676, f1_or_dsc: 0.8695814403111264

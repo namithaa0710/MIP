@@ -1,0 +1,14 @@
+# Python & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+
+# Large Archives & Raw Data
+*.zip
+*.tar.gz
+data/
+
+# Run Artifacts (uncomment if you want to keep results local)
+# results/
+# outputs/
