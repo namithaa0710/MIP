@@ -62,7 +62,7 @@ To understand how LB-UNet works from theory to implementation, read the files in
 
 ### 3. Execution Order (From Scratch to Output)
 
-When someone clones your repository, this is the exact order to execute:
+exact order to execute:
 
 ```bash
 # Step 1: Install dependencies
